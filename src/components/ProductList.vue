@@ -4,7 +4,7 @@
         <img v-if="loading" src="https://i.imgur.com/JfPpwOA.gif" alt="">
         <ul class="list-group" v-else>
             <li class="list-group-item" v-for="product in products" :key="product.id">
-                {{product.title}} - {{product.price}} - {{product.inventory}}
+                {{product.title}} - {{product.price | currency}} - {{product.inventory}}
                 <button class="btn btn-info" @click="addProductToCart(product)">Add to cart</button>
             </li>  
         </ul>
